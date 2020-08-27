@@ -169,14 +169,14 @@
 			 <!-- Import typed.min.js file from typed.js folder -->
 				<script src= "./typed.js-master/lib/typed.min.js"> </script> 
 		   
-		 <!-- Add jquery cdn -->
-		 <script src= 
-	 "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> 
-		 </script> 
+	
 	   
 		 <!-- Add this script for successful  
 			 implementation of typed.js  -->
 		 <script> 
+		 $(window).on("load", function() {
+			// weave your magic here.
+		
 			 if ($(".text-slider").length == 1) { 
 				   
 				 var typed_strings =  
@@ -199,6 +199,7 @@
 		
 				 }); 
 			 } 
+			});
 		 </script> 
 
 	</body>
