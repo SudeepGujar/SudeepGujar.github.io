@@ -29,7 +29,7 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div id="container" class="wrapper style1 fullscreen fade-up">
-							<div id="back" >
+							<div id="back" class="wrapper style1 fullscreen fade-up">
 								<lottie-player src="animations/29564-working-man.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
 							
 							</div>
@@ -50,8 +50,8 @@
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
 						<section>
-							<a href="#" class="image"><lottie-player src="animations/30840-work-from-home.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
-							</a>
+							<div class="image"><lottie-player src="animations/30840-work-from-home.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+							</div>
 							<div class="content">
 								<div class="inner">
 									<h2>Specialist in need, Generalist at heart.</h2>
@@ -73,8 +73,8 @@
 							</div>
 						</section>
 						<section>
-							<a href="#" class="image"><lottie-player src="animations/24117-hub-computer.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
-							</a>
+							<div class="image"><lottie-player src="animations/24117-hub-computer.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+							</div>
 							<div class="content">
 								<div class="inner">
 									<h2>Beauty lies in the eyes of the Beholder</h2>
@@ -114,46 +114,47 @@
 									</p>
 									</section>
 								<section>
-									<span class="icon solid major fa-database"></span>
+									<span class="icon solid major fa-code"></span>
 									<h3>Back End Stack</h3>
 									<p>
 										<ul style="list-style-type:none;">
 										<li>Java</li>
 										<li>Spring</li>
-										<li>MongoDB</li>
-										<li>MySQL</li>
 										<li>REST APIs</li>
 										<li>Python</li>
+										<li>Git</li>
+										<li>Gradle</li>
+										<li>Maven</li>
 										<li>AWS</li>
 										</ul>
 									</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-code"></span>
+									<span class="icon solid major fa-database"></span>
+									<h3>Database Stack</h3>
+									<p><ul style="list-style-type:none;">
+										<li>MongoDB</li>
+										<li>MySQL</li>
+										<li>CouchDB</li>
+										<li>Hive</li>
+									</ul>
+								</p></section>
+								<section>
+									<span class="icon solid major fa-wrench"></span>
 									<h3>Tools</h3>
 									<p><ul style="list-style-type:none;">
 										<li>Jenkins</li>
 										<li>Jira</li>
 										<li>GitHub</li>
 										<li>Swagger</li>
+										<li>DataDog</li>
 										<li>IntelliJ IDEA</li>
 										<li>Eclipse</li>
 										<li>VS Code</li>
 									</ul>
 								</p>
 								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Qualities</h3>
-									<p><ul style="list-style-type:none;">
-										<li>Team Player</li>
-										<li>Leader</li>
-										<li>Quick Learner</li>
-										<li>Problem Solver</li>
-										<li>Explorer</li>
-	
-									</ul>
-								</p></section>
+								
 							</div>
 		
 						</div>
@@ -168,8 +169,8 @@
 								Let's Collaborate.
 								</p>
 								<div class="split style1">
-								<section>
-									<lottie-player src="animations/lf30_editor_618SJl.json"  background="transparent"  speed="1"  autoplay></lottie-player>
+								<section id="connectContainer">
+									<lottie-player id="connect" src="animations/lf30_editor_618SJl.json"  background="transparent"  speed="1"  autoplay></lottie-player>
 							
 								</section>
 								<section>
@@ -214,6 +215,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+			<script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 			<script src= "./typed.js-master/lib/typed.min.js"> </script> 
 		   
 	
@@ -239,14 +241,37 @@
 					 strings: typed_strings.split(". "), 
 					 typeSpeed: 25, 
 					 loop: false, 
-					 startDelay: 3000,
+					 startDelay: 1000,
 					 backDelay: 1800, 
 					 backSpeed: 20, 
 		
 				 }); 
 			 } 
 			});
-		 </script> 
+		 </script>
+		 <script>
+			LottieInteractivity.create({
+				mode:"scroll",
+				player:'#connect',
+				actions: [
+					{
+            			visibility:[0, 0.1],
+           				 type: "stop",
+           				 frames: [0]
+       				},
+					{
+						visibility:[0.1,0.4],
+						type: "seek",
+						frames: [0, 65],
+					},
+					{
+            			visibility:[0.4, 1],
+          			  	type: "loop",
+            			frames: [65, 125]
+        			}
+				]  
+			});
+			</script>
 								
 
 	</body>
